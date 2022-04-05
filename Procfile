@@ -1,1 +1,0 @@
-worker: python botcode.py
