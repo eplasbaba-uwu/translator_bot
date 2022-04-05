@@ -4,4 +4,15 @@ the bot uses googletrans for the translation and sends an embed to the channel i
  Any useful changes can be dm'd to diluterightism#9395. 
  If code from this repository is used, acknowledgement is required.
  
- Created by diluterightism and eplasbaba-uwu
+
+ Things you need to know:
+ - The best way to run the code given in the repo is using https://replit.com 
+ - Before running, please add a secret variable and name the key as "Token"(without double-quotes)
+ - You need to add the token for your bot as the value of the variable
+ - Also, it is adviced that you set the version of googletrans to 3.1.0a0
+
+We hope to add more features to our bot in the near future
+
+With best regards,
+        diluterightism and eplasbaba-uwu
+
