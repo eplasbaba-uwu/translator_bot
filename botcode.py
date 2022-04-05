@@ -6,21 +6,23 @@ from googletrans import Translator
 
 import json
 import os
+from keep_alive import keep_alive
 
-if (os.path.exists(os.getcwd() + "/config.json")):
-    with open("./config.json") as f:
-        configdata = json.load(f)
+# if (os.path.exists(os.getcwd() + "/config.json")):
+#     with open("./config.json") as f:
+#         configdata = json.load(f)
 
-else:
-    configtemplate = {"Token": ""}
-    with open(os.getcwd() + "/config.json", "w+") as f:
-        json.dump(configtemplate, f)
-token = configdata["Token"]
+# else:
+#     configtemplate = {"Token": ""}
+#     with open(os.getcwd() + "/config.json", "w+") as f:
+#         json.dump(configtemplate, f)
+
 
 client = commands.Bot(command_prefix='t!', case_insensitive=True)
 client.remove_command("help")
-t = Translator()
+t = Translator(service_urls=['translate.googleapis.com'])
 
+token = os.environ['Token']
 
 @client.event
 async def on_ready():
@@ -128,7 +130,7 @@ async def detect(ctx, text):
     Embed.add_field(name="Confidence", value=str(conf) + "%", inline=False)
     await ctx.send(embed=Embed)
 
-
+keep_alive()
 client.run(token)
 # python3 translator.py
 # imagine copying code
