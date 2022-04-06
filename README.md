@@ -16,3 +16,4 @@ We hope to add more features to our bot in the near future
 With best regards,
         diluterightism and eplasbaba-uwu
 
+By the way, the invite to our bot is [HERE](https://discord.com/api/oauth2/authorize?client_id=959045829455413288&permissions=2048&scope=bot)
